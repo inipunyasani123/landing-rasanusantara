@@ -6,10 +6,10 @@ import "./globals.css";
 const fraunces = Fraunces({ variable: "--font-fraunces", subsets: ["latin"], weight: ["500", "600", "700"] });
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
-const __jsonld = {"@context":"https://schema.org","@type":"ProfessionalService","name":"Rasa Nusantara","description":"Kartu resep terstandar untuk dapur restoran","url":"https://landing-rasanusantara.vercel.app","areaServed":"ID"};
+const __jsonld = {"@context":"https://schema.org","@type":"ProfessionalService","name":"Rasa Nusantara","description":"Kartu resep terstandar untuk dapur restoran","url":"https://landing-rasanusantara.pintuweb.id","areaServed":"ID"};
 
 export const metadata = {
-  metadataBase: new URL("https://landing-rasanusantara.vercel.app"),
+  metadataBase: new URL("https://landing-rasanusantara.pintuweb.id"),
   title: { default: "Rasa Nusantara — Kartu Resep Terstandar untuk Dapur Restoran", template: "%s — Rasa Nusantara" },
   description: "Rasa Nusantara menulis ulang resep tradisional menjadi kartu resep terstandar untuk dapur restoran: gramasi, urutan kerja, titik kritis, dan HPP per porsi. Minta 3 kartu resep gratis.",
   applicationName: "Rasa Nusantara",
@@ -17,11 +17,11 @@ export const metadata = {
   authors: [{ name: "Rasa Nusantara" }],
   creator: "Rasa Nusantara",
   publisher: "Rasa Nusantara",
-  alternates: { canonical: "https://landing-rasanusantara.vercel.app" },
+  alternates: { canonical: "https://landing-rasanusantara.pintuweb.id" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://landing-rasanusantara.vercel.app",
+    url: "https://landing-rasanusantara.pintuweb.id",
     siteName: "Rasa Nusantara",
     title: "Rasa Nusantara — Kartu Resep Terstandar untuk Dapur Restoran",
     description: "Rasa Nusantara menulis ulang resep tradisional menjadi kartu resep terstandar untuk dapur restoran: gramasi, urutan kerja, titik kritis, dan HPP per porsi. Minta 3 kartu resep gratis.",

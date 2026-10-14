@@ -2,7 +2,7 @@
 
 Rasa Nusantara menulis ulang resep tradisional menjadi kartu resep terstandar untuk dapur restoran: gramasi, urutan kerja, titik kritis, dan HPP per porsi. Minta 3 kartu resep gratis.
 
-**Demo live:** https://landing-rasanusantara.vercel.app
+**Demo live:** https://landing-rasanusantara.pintuweb.id
 
 ![Tangkapan layar Rasa Nusantara](public/og.jpg)
 
