@@ -48,27 +48,28 @@ export default function SkalaBahan({ bahan, porsiDasar, targetFoodCost }) {
           {bahan.map(([b, j, s, biaya]) => (
             <tr key={b} className="border-b border-bark/10">
               <td className="py-2.5 pr-3 text-bark">{b}</td>
-              <td className="py-2.5 pr-3 text-right tabular-nums text-bark">{jumlah(j * k)} {s}</td>
-              <td className="py-2.5 text-right tabular-nums">{rp(biaya * k)}</td>
+              <td className="py-2.5 pr-3 text-right whitespace-nowrap tabular-nums text-bark">{jumlah(j * k)} {s}</td>
+              <td className="py-2.5 text-right whitespace-nowrap tabular-nums">{rp(biaya * k)}</td>
             </tr>
           ))}
         </tbody>
         <tfoot>
           <tr className="border-t-2 border-bark">
             <th scope="row" colSpan={2} className="py-3 text-left font-semibold text-bark">Total bahan</th>
-            <td className="py-3 text-right font-semibold tabular-nums text-bark">{rp(total)}</td>
+            <td className="py-3 text-right font-semibold whitespace-nowrap tabular-nums text-bark">{rp(total)}</td>
           </tr>
         </tfoot>
       </table>
 
-      <dl className="mt-6 grid grid-cols-2 gap-4">
+      <dl className="mt-6 grid grid-cols-2 gap-3 sm:gap-4">
         <div className="bg-rice p-4">
           <dt className="recipe-label">HPP per porsi</dt>
-          <dd className="mt-1 text-2xl font-semibold tabular-nums text-bark">{rp(Math.round(hpp / 50) * 50)}</dd>
+          <dd className="mt-1 font-[family-name:var(--font-fraunces)] text-xl font-semibold whitespace-nowrap tabular-nums text-bark sm:text-2xl">{rp(Math.round(hpp / 50) * 50)}</dd>
         </div>
         <div className="bg-rice p-4">
-          <dt className="recipe-label">Harga jual saran ({targetFoodCost}% food cost)</dt>
-          <dd className="mt-1 text-2xl font-semibold tabular-nums text-clay">{rp(jual)}</dd>
+          <dt className="recipe-label">Harga jual saran</dt>
+          <dd className="mt-1 font-[family-name:var(--font-fraunces)] text-xl font-semibold whitespace-nowrap tabular-nums text-clay sm:text-2xl">{rp(jual)}</dd>
+          <dd className="mt-0.5 text-xs">pada food cost {targetFoodCost}%</dd>
         </div>
       </dl>
     </div>

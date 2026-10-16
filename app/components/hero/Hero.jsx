@@ -8,7 +8,7 @@ export default function Hero() {
   const r = RESEP[0];
   const h = hitung(r);
   return (
-    <section className="relative overflow-hidden bg-rice px-6 pt-32 pb-20 md:pt-40 md:pb-28">
+    <section className="relative overflow-hidden bg-rice px-6 pt-28 pb-16 md:pt-40 md:pb-28">
       <div className="mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
         <div>
           <p className="recipe-label text-clay">Kartu resep terstandar untuk dapur restoran</p>
@@ -47,7 +47,7 @@ export default function Hero() {
               {r.bahan.slice(0, 5).map(([b, j, s]) => (
                 <tr key={b} className="border-b border-bark/10">
                   <td className="py-2 pr-3 text-bark">{b}</td>
-                  <td className="py-2 text-right tabular-nums text-bark">{j.toLocaleString('id-ID')} {s}</td>
+                  <td className="py-2 text-right whitespace-nowrap tabular-nums text-bark">{j.toLocaleString('id-ID')} {s}</td>
                 </tr>
               ))}
               <tr><td className="pt-2 text-bark-soft italic" colSpan={2}>…dan {r.bahan.length - 5} bahan lain</td></tr>

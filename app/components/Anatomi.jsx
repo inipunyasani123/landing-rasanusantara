@@ -23,7 +23,7 @@ export default function Anatomi() {
   const r = RESEP[0];
   const h = hitung(r);
   return (
-    <section id="anatomi" className="scroll-mt-16 bg-rice px-6 py-20 md:py-28">
+    <section id="anatomi" className="scroll-mt-16 bg-rice px-6 py-16 md:py-28">
       <div className="mx-auto max-w-6xl">
         <p className="recipe-label mb-4 text-clay">Anatomi kartu resep</p>
         <h2 className="max-w-2xl text-[2rem] leading-[1.1] font-semibold text-bark md:text-[2.7rem]">Lima hal yang membuat resep bisa diulang</h2>
@@ -40,7 +40,7 @@ export default function Anatomi() {
               <Penanda n={2} />
               <ul className="space-y-1.5 text-sm">
                 {r.bahan.slice(0, 4).map(([b, j, s]) => (
-                  <li key={b} className="flex justify-between gap-4 text-bark"><span>{b}</span><span className="tabular-nums">{j.toLocaleString('id-ID')} {s}</span></li>
+                  <li key={b} className="flex justify-between gap-4 text-bark"><span>{b}</span><span className="whitespace-nowrap tabular-nums">{j.toLocaleString('id-ID')} {s}</span></li>
                 ))}
               </ul>
             </div>
@@ -73,7 +73,7 @@ export default function Anatomi() {
               </li>
             ))}
             <li className="pl-11">
-              <Link href={`/kartu-resep/${r.slug}`} className="recipe-label text-clay underline underline-offset-4">Buka kartu {r.nama.toLowerCase()} lengkap</Link>
+              <Link href={`/kartu-resep/${r.slug}`} className="recipe-label inline-block py-1.5 leading-[1.8] text-clay underline underline-offset-4">Buka kartu {r.nama.toLowerCase()} lengkap</Link>
             </li>
           </ol>
         </div>

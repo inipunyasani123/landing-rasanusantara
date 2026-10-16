@@ -21,7 +21,7 @@ export default function LeadForm() {
   const input = 'w-full border border-bark/20 bg-rice px-4 py-3 text-bark focus:border-clay focus:outline-none';
 
   return (
-    <section id="minta" className="scroll-mt-16 bg-rice-2 px-6 py-20 md:py-28">
+    <section id="minta" className="scroll-mt-16 bg-rice-2 px-6 py-16 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
         <div>
           <p className="recipe-label mb-4 text-clay">Gratis</p>

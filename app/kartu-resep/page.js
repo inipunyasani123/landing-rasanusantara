@@ -4,7 +4,7 @@ import Koleksi from '../components/Koleksi';
 
 export const metadata = {
   title: 'Kartu Resep',
-  description: `Kartu resep terstandar Rasa Nusantara: ${RESEP.map((r) => r.nama).join(', ')} — lengkap dengan gramasi, urutan, titik kritis, dan HPP per porsi.`,
+  description: `${RESEP.map((r) => r.nama).join(', ')}: kartu resep terstandar lengkap dengan gramasi, urutan, titik kritis, dan HPP per porsi.`,
   alternates: { canonical: `${SITE}/kartu-resep` },
 };
 
