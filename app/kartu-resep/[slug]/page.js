@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { RESEP, SITE, hitung, menit, resepBySlug, rupiah } from '@/lib/resep';
@@ -35,19 +36,24 @@ export default async function Kartu({ params }) {
     cookTime: `PT${r.masak}M`,
     recipeIngredient: r.bahan.map(([b, j, s]) => `${j} ${s} ${b}`),
     recipeInstructions: r.langkah.map((t) => ({ '@type': 'HowToStep', text: t })),
+    image: `${SITE}/images/hidangan/${r.slug}.webp`,
   };
 
   return (
     <main className="bg-rice-2 px-4 pt-28 pb-24 sm:px-6">
       <article className="recipe-card mx-auto max-w-4xl bg-rice-2 shadow-[0_24px_60px_-34px_rgb(58_47_38/0.6)]">
         <header className="border-b-2 border-bark px-6 pt-10 pb-7 sm:px-10">
+          <figure className="float-right -mt-4 -mr-2 ml-3 w-28 sm:-mt-6 sm:ml-6 sm:w-48 md:w-56">
+            <Image src={`/images/hidangan/${r.slug}.webp`} alt={`Ilustrasi contoh penyajian ${r.nama}, tampak atas`} width={224} height={224} priority className="h-auto w-full" />
+            <figcaption className="recipe-label mt-1 text-center text-bark-soft">Contoh penyajian</figcaption>
+          </figure>
           <p className="recipe-label text-clay"><Link href="/kartu-resep" className="hover:underline">Kartu resep</Link> · {r.asal}</p>
           <div className="mt-3 flex flex-wrap items-end justify-between gap-4">
             <h1 className="text-[2.4rem] leading-[1.05] font-semibold text-bark md:text-5xl">{r.nama}</h1>
             <Pedas n={r.pedas} />
           </div>
           <p className="mt-3 text-lg leading-relaxed">{r.ringkas}</p>
-          <dl className="mt-6 grid grid-cols-2 gap-4 text-sm sm:grid-cols-4">
+          <dl className="clear-both mt-6 grid grid-cols-2 gap-4 text-sm sm:clear-none sm:grid-cols-4">
             <div><dt className="recipe-label">Porsi dasar</dt><dd className="mt-1 text-bark">{r.porsi} porsi</dd></div>
             <div><dt className="recipe-label">Satu porsi</dt><dd className="mt-1 text-bark">{r.ukuranPorsi}</dd></div>
             <div><dt className="recipe-label">Persiapan</dt><dd className="mt-1 text-bark">{menit(r.persiapan)}</dd></div>
@@ -102,9 +108,12 @@ export default async function Kartu({ params }) {
         <ul className="grid gap-4 sm:grid-cols-3">
           {lain.map((x) => (
             <li key={x.slug}>
-              <Link href={`/kartu-resep/${x.slug}`} className="recipe-card block bg-rice p-5 hover:border-clay">
-                <span className="recipe-label text-clay">{x.asal}</span>
-                <span className="mt-1 block font-[family-name:var(--font-fraunces)] text-xl font-semibold text-bark">{x.nama}</span>
+              <Link href={`/kartu-resep/${x.slug}`} className="recipe-card flex items-center gap-4 bg-rice p-5 hover:border-clay">
+                <Image src={`/images/hidangan/${x.slug}.webp`} alt="" width={56} height={56} className="h-14 w-14 shrink-0" />
+                <span>
+                  <span className="recipe-label text-clay">{x.asal}</span>
+                  <span className="mt-1 block font-[family-name:var(--font-fraunces)] text-xl font-semibold text-bark">{x.nama}</span>
+                </span>
               </Link>
             </li>
           ))}
