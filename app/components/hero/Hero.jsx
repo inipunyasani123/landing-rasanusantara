@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Piring from '../Piring';
 import Link from 'next/link';
 import { RESEP, hitung, rupiah } from '@/lib/resep';
 import Pedas from '../Pedas';
@@ -54,7 +54,7 @@ export default function Hero() {
               <tr><td className="pt-2 text-bark-soft italic" colSpan={2}>…dan {r.bahan.length - 5} bahan lain</td></tr>
             </tbody>
           </table>
-          <Image src={`/images/hidangan/${r.slug}.webp`} alt="" width={176} height={176} priority className="pointer-events-none absolute -right-8 -bottom-12 h-32 w-32 -rotate-6 sm:-right-12 sm:h-44 sm:w-44" />
+          <Piring slug={r.slug} size={256} priority className="pointer-events-none absolute -right-8 -bottom-12 h-32 w-32 -rotate-6 sm:-right-12 sm:h-44 sm:w-44" />
           <div className="mt-5 grid grid-cols-2 gap-3 border-t border-bark/20 pt-4 pr-24 text-sm sm:pr-28">
             <p><span className="recipe-label block">HPP / porsi</span><span className="mt-1 block font-semibold text-bark">{rupiah(h.hpp)}</span></p>
             <p><span className="recipe-label block">Harga jual saran</span><span className="mt-1 block font-semibold text-clay">{rupiah(h.jual)}</span></p>
