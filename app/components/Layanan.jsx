@@ -12,7 +12,7 @@ export default function Layanan() {
               <p className="recipe-label mb-4 text-clay">Contoh kartu</p>
               <h2 className="text-[2rem] leading-[1.1] font-semibold text-bark md:text-[2.7rem]">Empat resep dari empat pulau</h2>
             </div>
-            <Link href="/kartu-resep" className="recipe-label shrink-0 self-start py-2 text-clay underline underline-offset-4 sm:self-auto">Semua kartu resep</Link>
+            <Link href="/kartu-resep" className="recipe-label inline-flex min-h-11 shrink-0 items-center self-start text-clay underline underline-offset-4 sm:self-auto">Semua kartu resep</Link>
           </div>
           <Koleksi geser />
         </div>

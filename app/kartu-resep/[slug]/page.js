@@ -47,7 +47,7 @@ export default async function Kartu({ params }) {
             <Piring slug={r.slug} size={448} priority alt={r.nama} className="h-auto w-full" />
             <figcaption className="recipe-label mt-1 text-center text-bark-soft">Contoh penyajian</figcaption>
           </figure>
-          <p className="recipe-label text-clay"><Link href="/kartu-resep" className="hover:underline">Kartu resep</Link> · {r.asal}</p>
+          <p className="recipe-label text-clay"><Link href="/kartu-resep" className="inline-block py-3 hover:underline">Kartu resep</Link> · {r.asal}</p>
           <div className="mt-3 flex flex-wrap items-end justify-between gap-4">
             <h1 className="text-[2.4rem] leading-[1.05] font-semibold text-bark md:text-5xl">{r.nama}</h1>
             <Pedas n={r.pedas} />

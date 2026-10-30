@@ -12,15 +12,15 @@ export default function Footer() {
         <nav aria-label="Kartu resep">
           <p className="recipe-label mb-4 text-[#e9a27c]">Kartu resep</p>
           <ul className="space-y-1 text-sm text-rice/80">
-            {RESEP.map((r) => <li key={r.slug}><Link href={`/kartu-resep/${r.slug}`} className="inline-block py-1.5 hover:text-rice">{r.nama}</Link></li>)}
+            {RESEP.map((r) => <li key={r.slug}><Link href={`/kartu-resep/${r.slug}`} className="inline-flex min-h-11 items-center hover:text-rice">{r.nama}</Link></li>)}
           </ul>
         </nav>
         <nav aria-label="Halaman">
           <p className="recipe-label mb-4 text-[#e9a27c]">Halaman</p>
           <ul className="space-y-1 text-sm text-rice/80">
-            <li><Link href="/#anatomi" className="inline-block py-1.5 hover:text-rice">Anatomi kartu</Link></li>
-            <li><Link href="/#layanan" className="inline-block py-1.5 hover:text-rice">Layanan</Link></li>
-            <li><Link href="/#minta" className="inline-block py-1.5 hover:text-rice">3 kartu gratis</Link></li>
+            <li><Link href="/#anatomi" className="inline-flex min-h-11 items-center hover:text-rice">Anatomi kartu</Link></li>
+            <li><Link href="/#layanan" className="inline-flex min-h-11 items-center hover:text-rice">Layanan</Link></li>
+            <li><Link href="/#minta" className="inline-flex min-h-11 items-center hover:text-rice">3 kartu gratis</Link></li>
           </ul>
         </nav>
       </div>

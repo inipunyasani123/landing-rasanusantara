@@ -21,14 +21,14 @@ export default function SkalaBahan({ bahan, porsiDasar, targetFoodCost }) {
       <div className="flex flex-wrap items-center gap-3 border-b border-bark/20 pb-5">
         <span className="recipe-label text-bark" id="label-porsi">Jumlah porsi</span>
         <div className="flex items-center" role="group" aria-labelledby="label-porsi">
-          <button type="button" onClick={() => atur(porsi - 1)} className="h-10 w-10 border border-bark/30 text-lg text-bark hover:border-clay" aria-label="Kurangi satu porsi">−</button>
-          <output className="flex h-10 min-w-16 items-center justify-center border-y border-bark/30 px-3 font-semibold tabular-nums text-bark" aria-live="polite">{porsi}</output>
-          <button type="button" onClick={() => atur(porsi + 1)} className="h-10 w-10 border border-bark/30 text-lg text-bark hover:border-clay" aria-label="Tambah satu porsi">+</button>
+          <button type="button" onClick={() => atur(porsi - 1)} className="h-11 w-11 border border-bark/30 text-lg text-bark hover:border-clay" aria-label="Kurangi satu porsi">−</button>
+          <output className="flex h-11 min-w-16 items-center justify-center border-y border-bark/30 px-3 font-semibold tabular-nums text-bark" aria-live="polite">{porsi}</output>
+          <button type="button" onClick={() => atur(porsi + 1)} className="h-11 w-11 border border-bark/30 text-lg text-bark hover:border-clay" aria-label="Tambah satu porsi">+</button>
         </div>
         <div className="flex gap-2">
           {[porsiDasar, 25, 50].filter((v, i, a) => a.indexOf(v) === i).map((n) => (
             <button key={n} type="button" onClick={() => atur(n)} aria-pressed={porsi === n}
-              className={`recipe-label px-3 py-2 ${porsi === n ? 'bg-clay text-rice' : 'border border-bark/25 text-bark hover:border-clay'}`}>
+              className={`recipe-label min-h-11 px-3 py-2 ${porsi === n ? 'bg-clay text-rice' : 'border border-bark/25 text-bark hover:border-clay'}`}>
               {n} porsi
             </button>
           ))}

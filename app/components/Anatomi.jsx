@@ -73,7 +73,7 @@ export default function Anatomi() {
               </li>
             ))}
             <li className="pl-11">
-              <Link href={`/kartu-resep/${r.slug}`} className="recipe-label inline-block py-1.5 leading-[1.8] text-clay underline underline-offset-4">Buka kartu {r.nama.toLowerCase()} lengkap</Link>
+              <Link href={`/kartu-resep/${r.slug}`} className="recipe-label inline-flex min-h-11 items-center leading-[1.8] text-clay underline underline-offset-4">Buka kartu {r.nama.toLowerCase()} lengkap</Link>
             </li>
           </ol>
         </div>
