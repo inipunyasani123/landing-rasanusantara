@@ -44,7 +44,7 @@ export default async function Kartu({ params }) {
       <article className="recipe-card mx-auto max-w-4xl bg-rice-2 shadow-[0_24px_60px_-34px_rgb(58_47_38/0.6)]">
         <header className="border-b-2 border-bark px-6 pt-10 pb-7 sm:px-10">
           <figure className="float-right -mt-4 -mr-2 ml-3 w-28 sm:-mt-6 sm:ml-6 sm:w-48 md:w-56">
-            <Piring slug={r.slug} size={448} priority alt={`Ilustrasi contoh penyajian ${r.nama}, tampak atas`} className="h-auto w-full" />
+            <Piring slug={r.slug} size={448} priority alt={r.nama} className="h-auto w-full" />
             <figcaption className="recipe-label mt-1 text-center text-bark-soft">Contoh penyajian</figcaption>
           </figure>
           <p className="recipe-label text-clay"><Link href="/kartu-resep" className="hover:underline">Kartu resep</Link> · {r.asal}</p>

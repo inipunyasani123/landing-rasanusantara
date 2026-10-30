@@ -15,7 +15,7 @@ Bahasa rupa **Kartu Resep**. Kalau Citarasa adalah papan nama rumah makan, Rasa 
 ## Halaman
 
 - `/` — jasa kartu resep terstandar untuk dapur restoran, dengan anatomi kartu bernomor
-- `/kartu-resep` — empat contoh kartu resep: rendang, soto banjar, ayam betutu, coto makassar
+- `/kartu-resep` — empat contoh kartu resep: rendang, rawon, sate lilit, coto makassar
 - `/kartu-resep/[slug]` — kartu lengkap dengan penskala porsi 1–200 dan HPP per porsi
 
 ## Teknologi
